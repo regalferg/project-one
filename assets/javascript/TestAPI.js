@@ -12,14 +12,21 @@
     }).done(function(response) {
     	 console.log(response);
         document.preventDefault;
+        $("table tbody ").append("<tr><td>" + response + "</td></tr>");
+
     	
 
 });
+
   }
+
+
+
       $("#add-band").on("click", function(event) {
+        event.preventDefault();
  
         
-         artist = $("#name-input").val().trim();
+         artist = $("#band-input").val().trim();
         console.log(artist);
         });
 
@@ -29,7 +36,8 @@
         title = $("#lyrics-input").val().trim();
 
     
-       	console.log(title);        
+       	console.log(title);
+        searchLyrics();        
       });
 
         
