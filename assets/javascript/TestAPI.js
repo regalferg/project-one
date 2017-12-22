@@ -15,6 +15,7 @@
         
         $("table tbody ").html("<tr><td>" + response.lyrics + "</td></tr>");
 
+
   
 
 });
@@ -29,7 +30,11 @@
         
          artist = $("#band-input").val().trim();
         console.log(artist);
+        ;
+        
         });
+
+
 
 		$("#add-lyrics").on("click", function(event) {
         event.preventDefault();
@@ -38,6 +43,7 @@
 
     
        	console.log(title);
+        $("#band-display").html("<h3>" + artist + "</h3>");
         searchLyrics();        
       });
 
