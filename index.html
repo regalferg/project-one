@@ -18,6 +18,7 @@
 			<!-- Jumbotron -->
 			<div class="jumbotron">
 				<h1 class="text-center">Event Ready!</h1>
+				<p class="text-center">Prepare for your concert event.</p>
 			</div> <!-- END Jumbo -->
 
 			<div class="row">
@@ -32,9 +33,9 @@
 					<form role="form">
 							<div class="form-group">
 							<label for="band-input">Band Name:</label>
-							<input class="form-control" id="band-input" type="text">
+							<input class="form-control" id="band-input" type="text" required>
 							</div> <!-- END Form Grp -->
-							<button class="btn btn-default" id="add-band" type="submit">Submit</button>
+							<button class="btn btn-default" id="add-band" type="submit" >Submit</button>
 
 								</form>
 				</div> <!-- END Panel body -->
@@ -80,7 +81,7 @@
 									<form role="form">
 							<div class="form-group">
 							<label for="lyrics-input">Find Lyrics:</label>
-							<input class="form-control" id="lyrics-input" type="text">
+							<input class="form-control" id="lyrics-input" type="text" required />
 							</div> <!-- END Form Grp -->
 							<button class="btn btn-default" id="add-lyrics" type="submit">Submit</button>
 
@@ -128,10 +129,13 @@
 		</div> <!-- END Row 2 -->
 	</div> <!-- END Container -->
 
+
+
 	
 		
 			<!-- Scripts -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script type="text/javascript" src="assets/javascript/TestAPI.js"></script>
+			<script type="text/javascript" src="assets/javascript/app.js"></script>
 		</body>
 </html>

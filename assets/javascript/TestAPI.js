@@ -12,9 +12,10 @@
     }).done(function(response) {
     	 console.log(response);
         document.preventDefault;
-        $("table tbody ").append("<tr><td>" + response + "</td></tr>");
+        
+        $("table tbody ").html("<tr><td>" + response.lyrics + "</td></tr>");
 
-    	
+  
 
 });
 
