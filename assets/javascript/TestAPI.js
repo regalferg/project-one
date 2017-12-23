@@ -43,7 +43,7 @@
 
     
        	console.log(title);
-        $("#band-display").html("<h3>" + artist + "</h3>");
+        //$("#band-display").html("<h3>" + artist + "</h3>");
         searchLyrics();        
       });
 

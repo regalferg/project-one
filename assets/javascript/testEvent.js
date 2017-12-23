@@ -1,10 +1,12 @@
-var event = '';
+var eventName = '';
+var eventCity ='';
  
  $("#add-band").on("click", function(event) {
-  event = $("#band-input").val().trim();
+  eventName = $("#band-input").val().trim();
+  eventCity = $("#venue-input").val().trim();
   var queryURL = 
-  "https://app.ticketmaster.com/discovery/v2/events?apikey=Y68sacNOAQxxvGbr0Du9KNZNykWVrE3m&keyword=" + event;
-   
+  "https://app.ticketmaster.com/discovery/v2/events?apikey=Y68sacNOAQxxvGbr0Du9KNZNykWVrE3m&keyword=" + eventName + "&city=" + eventCity;
+   console.log(queryURL);
       $.ajax({
           url: queryURL,
           method: "GET"
@@ -15,10 +17,15 @@ var event = '';
 
           var results = response._embedded.events[0]._embedded.venues;
           for (var i = 0; i < results.length; i++) {
-              var events = results[i];
-              console.log(events);
-              $("#band-display").html("<tr><td>" + events.name + "</td></tr>"); 
-              $("#band-display").append("<tr><td>" + events.address.line1 + "</td></tr>");    
+              var eventsObj = results[i];
+              console.log(eventsObj);
+              $("#band-display").html("<tr><td> Venue Name:<br> " + eventsObj.name + "</td></tr>"); 
+              $("#band-display").append("<tr><td> Address: <br>" + eventsObj.address.line1 + "</td></tr>");
+              $("#band-display").append("<tr><td> General Rules:<br> " + eventsObj.generalInfo.generalRule + "</td></tr>");
+              var posterImage = eventsObj.images[0].url;
+              console.log(posterImage);
+              var img = $('<img>') .attr('src', posterImage )
+              $("#band-display").append(img);      
             }
 
           
