@@ -13,7 +13,14 @@ body{
 
 }
 
-/*panel-body{
+/*#player{
 	width: 640;
 	height: 390;
 }*/
+
+
+@media handheld, screen and (max-width: 720px) {
+iframe {
+    width: 50%;
+}
+
