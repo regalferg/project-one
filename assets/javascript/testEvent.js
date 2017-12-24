@@ -19,9 +19,11 @@ var eventCity ='';
           for (var i = 0; i < results.length; i++) {
               var eventsObj = results[i];
               console.log(eventsObj);
-              $("#band-display").html("<tr><td> Venue Name:<br> " + eventsObj.name + "</td></tr>"); 
-              $("#band-display").append("<tr><td> Address: <br>" + eventsObj.address.line1 + "</td></tr>");
-              $("#band-display").append("<tr><td> General Rules:<br> " + eventsObj.generalInfo.generalRule + "</td></tr>");
+              $("#band-display").html("<tr><td><strong> Venue Name:</strong><br> " + eventsObj.name + "</td></tr>"); 
+              $("#band-display").append("<tr><td><strong> Address: </strong><br>" + eventsObj.address.line1 + "</td></tr>");
+              $("#band-display").append("<tr><td><strong> General Rules:</strong><br> " + eventsObj.generalInfo.generalRule + "</td></tr>");
+              $("#band-display").append("<tr><td><strong> Parking:</strong><br> " + eventsObj.parkingDetail + "</td></tr>");
+              $("#band-display").append("<tr><td><strong> Social: </strong><br>" + eventsObj.social.twitter.handle + "</td></tr>");
               var posterImage = eventsObj.images[0].url;
               console.log(posterImage);
               var img = $('<img>') .attr('src', posterImage )
