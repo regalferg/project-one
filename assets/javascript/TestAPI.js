@@ -3,6 +3,10 @@
   var title = "";
 
   function searchLyrics(){
+    if (artist.toLowerCase() === "nickelback") {
+          artist= "Rick Astley";
+          title  = "never gonna give you up"
+        }
 
 
 		var queryURL = "https://api.lyrics.ovh/v1/"+ artist + "/" + title ;
@@ -12,6 +16,8 @@
     }).done(function(response) {
     	 console.log(response);
         document.preventDefault;
+
+
         
         $("table tbody ").html("<tr><td>" + response.lyrics + "</td></tr>");
 
