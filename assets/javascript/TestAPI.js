@@ -38,20 +38,24 @@
         console.log(artist);
         ;
         
+        title = $("#lyrics-input").val().trim();
+        searchLyrics();
+
+        
         });
 
 
 
-		$("#add-lyrics").on("click", function(event) {
-        event.preventDefault();
+	//	$("#add-lyrics").on("click", function(event) {
+        //event.preventDefault();
         
-        title = $("#lyrics-input").val().trim();
+      //  title = $("#lyrics-input").val().trim();
 
     
-       	console.log(title);
+    //   	console.log(title);
         //$("#band-display").html("<h3>" + artist + "</h3>");
-        searchLyrics();        
-      });
+  //      searchLyrics();        
+//      });
 
         
 
