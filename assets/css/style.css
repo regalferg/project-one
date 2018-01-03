@@ -1,5 +1,4 @@
 body{
-/*background: url("../images/nickel.jpg");*/
 background: url("../images/jumbo_image.jpg");
 background-repeat: no-repeat;
 background-size: cover;
@@ -26,17 +25,14 @@ background-size: cover;
 	background-color: white;
 	font-family: 'Righteous', cursive;
 
-
-
 }
+
+
 label{
 	color: white;
 }
 
-/*#player{
-	width: 640;
-	height: 390;
-}*/
+
 #execute-request-button{
 	margin: 15px;
 }

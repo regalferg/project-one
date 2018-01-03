@@ -12,14 +12,16 @@
 	<body>
 		<div class=container>
 			<br>
-			<!-- Jumbotron -->
+			<!-- Jumbotron Page Header -->
 			<div class="jumbotron">
 				<h1 class="text-center">Event Ready!</h1>
 				<p class="text-center">Prepare for your concert event.</p>
 				<!-- END Jumbo -->
 			</div>
+			
+			<!--Sign in to Google to Authorize Users Device-->
 			<button id="execute-request-button" class = "btn btn-danger">Authorize</button>
-			<label for="execute-request-button" class="alert alert-danger" role="alert">*Authorization Needed For YoutTube Video Search
+			<label for="execute-request-button" class="alert alert-danger" role="alert">*Authorization Needed For YouTube Video Search
 			</label>
 			<div class="row">
 				<div class="col-lg-2">
@@ -28,6 +30,10 @@
 							<h3 class="panel-title">Event Search</h3>
 							<!-- END Panel heading -->
 						</div>
+						
+						     <!-- Begin Form Group
+						     	User searches for Band, Venue, and Song -->
+
 						<div class="panel-body">
 							<form role="form">
 								<div class="form-group">
@@ -35,9 +41,9 @@
 									<input class="form-control" id="band-input" type="text" placeholder="Enter Band Name" required>
 									<label for="venue-input">Venue City Name:</label>
 									<input class="form-control" id="venue-input" type="text" placeholder="Enter Venue City" required>
-									<label for="lyrics-input">Find Lyrics:</label>
+									<label for="lyrics-input">Find Lyrics & Video:</label>
 									<input class="form-control" id="lyrics-input" type="text" placeholder="Enter Song Title" required />
-									<!-- END Form Grp -->
+							   <!-- END Form Grp -->
 								</div>
 								
 								<input class="btn btn-warning" id="add-band" type="submit">
@@ -66,6 +72,9 @@
 				<!-- END Row 1 -->
 			</div>
 			<!-- END Row 2 Col 1 -->
+			
+			
+			<!--Display Lyrics for Song Searched-->
 			<div class = "row">
 				<div class = "col-lg-2"></div>
 				<div class="col-lg-9">
@@ -89,6 +98,7 @@
 				</div>
 				<!-- END Row 2 -->
 			</div>
+			<!--Displays the YouTube Video for Song Searched-->
 			<div class = "row">
 				<div class = "col-lg-2">
 				</div>
@@ -99,6 +109,7 @@
 								<h3 class="panel-title">Video Search Results</h3>
 								<!-- END Panel heading -->
 							</div>
+								<!-- Video Player -->
 							<div class="panel-body">
 								<iframe id="player" type="text/html" width="640" height="390" frameborder="0"></iframe>
 								<!-- END Panel 3 body -->
