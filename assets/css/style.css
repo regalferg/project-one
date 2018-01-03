@@ -6,7 +6,9 @@ background-size: cover;
 
 }
 
-
+#col2{
+	position: fixed;
+}
 .panel > .panel-heading{
 	background-color: #0033CC;
 	color: white;
