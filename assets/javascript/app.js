@@ -48,7 +48,7 @@ function setSigninStatus() {
     isAuthorized = user.hasGrantedScopes('https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner');
     // Toggle button text and displayed statement based on current auth status.
     if (isAuthorized) {
-        defineRequest();
+        //defineRequest();
     }
 }
 
