@@ -15,12 +15,21 @@ var eventCity ='';
           document.preventDefault;
 
 
+            if(response._embedded === undefined){
+              $("#band-display").html("<tr><td><strong>Try a Different City</strong><br></td></tr>");
+            }
+
           var results = response._embedded.events[0]._embedded.venues;
           for (var i = 0; i < results.length; i++) {
               var eventsObj = results[i];
               console.log(eventsObj);
               $("#band-display").html("<tr><td><strong> Venue Name:</strong><br> " + eventsObj.name + "</td></tr>"); 
               $("#band-display").append("<tr><td><strong> Address: </strong><br>" + eventsObj.address.line1 + "</td></tr>");
+              $("#band-display").append("<tr><td><strong> city: </strong><br>" + eventsObj.city.name + "</td></tr>");
+              if(eventCity === undefined){
+                $("#band-display").html("<tr><td><strong> Try a Different City </strong><br></td></tr>");
+              }
+             
               $("#band-display").append("<tr><td><strong> General Rules:</strong><br> " + eventsObj.generalInfo.generalRule + "</td></tr>");
               $("#band-display").append("<tr><td><strong> Parking:</strong><br> " + eventsObj.parkingDetail + "</td></tr>");
               $("#band-display").append("<tr><td><strong> Social: </strong><br>" + eventsObj.social.twitter.handle + "</td></tr>");
@@ -32,7 +41,4 @@ var eventCity ='';
 
           
           });
-
-          
-
     });
