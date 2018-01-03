@@ -132,7 +132,7 @@ function handleAPILoaded() {
 
 // Search based on title and artist values.
 function search() {
-    if (title === "") {
+    if (title === "" || artist === "") {
         $("#lyrics-response").html("<tr><td><strong>Please Enter A Song Title in the 'Find Lyrics Field'</strong><br></td></tr>");
         return 
     }
